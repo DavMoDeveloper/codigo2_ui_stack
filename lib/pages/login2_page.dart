@@ -1,3 +1,4 @@
+import 'package:codigo2_ui_stack/pages/init_page.dart';
 import 'package:codigo2_ui_stack/widgets/circle_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +8,7 @@ class Login2Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
-    double width  = MediaQuery.of(context).size.width;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Color(0xffFBF5FF),
       body: Stack(
@@ -22,7 +23,7 @@ class Login2Page extends StatelessWidget {
                   radius: height * 0.20,
                   colors: [
                     Color(0xffD94E8E),
-                    Color(0xffD98D97),
+                    Color(0xffE98DB7),
                   ],
                 ),
               ),
@@ -44,7 +45,7 @@ class Login2Page extends StatelessWidget {
                   radius: 22,
                   colors: [
                     Color(0xffD94E8E),
-                    Color(0xffD98D97),
+                    Color(0xffE98DB7),
                   ],
                 ),
               ),
@@ -62,6 +63,49 @@ class Login2Page extends StatelessWidget {
             ],
           ),
           //Formulario
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(28.0),
+              child: Column(
+                children: [
+                  Text("Create your Account!"),
+                  TextField(),
+                  TextField(),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(40.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color(0xffD94E8E).withOpacity(0.65),
+                            offset: const Offset(0, 4),
+                            blurRadius: 12.0,
+                          ),
+                        ],
+                        gradient: LinearGradient(
+                          colors: [
+                            Color(0xffE98DB7),
+                            Color(0xffD94E8E),
+                          ],
+                        )),
+                    child: MaterialButton(
+                      child: Text("Create Account"),
+                      textColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40.0),
+                      ),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> InitPage()));
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
