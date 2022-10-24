@@ -11,7 +11,6 @@ class Challenge1Page extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Stack(
         children: [
-
           Container(
             height: height * 0.5,
             width: double.infinity,
@@ -38,7 +37,6 @@ class Challenge1Page extends StatelessWidget {
               ],
             ),
           ),
-
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -47,9 +45,8 @@ class Challenge1Page extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.black.withOpacity(0.65),
                 borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(32.0),
-                  topLeft: Radius.circular(32.0)
-                ),
+                    topRight: Radius.circular(32.0),
+                    topLeft: Radius.circular(32.0)),
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -57,17 +54,87 @@ class Challenge1Page extends StatelessWidget {
                 children: [
                   Text(
                     "Sacramento",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16.0
-                    ),
+                    style: TextStyle(color: Colors.white, fontSize: 16.0),
                   ),
                   Text(
                     "Adam Gontier",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 30.0,
-                      fontWeight: FontWeight.bold
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          child: Container(
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.calendar_today_outlined,
+                                  color: Colors.greenAccent,
+                                  size: 15.0,
+                                ),
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "01 Dec 2021",
+                                      style: TextStyle(
+                                        color: Colors.greenAccent,
+                                      ),
+                                    ),
+                                    Text(
+                                      "7:00 pm",
+                                      style: TextStyle(
+                                        color: Colors.greenAccent,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: Container(
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.mode_of_travel_outlined,
+                                  color: Colors.greenAccent,
+                                  size: 15.0,
+                                ),
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Ace of Spades",
+                                      style: TextStyle(
+                                        color: Colors.greenAccent,
+                                      ),
+                                    ),
+                                    Text(
+                                      "Sacramento,CA",
+                                      style: TextStyle(
+                                        color: Colors.greenAccent,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Text(
@@ -75,22 +142,57 @@ class Challenge1Page extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 20.0,
-                        fontWeight: FontWeight.bold
-                    ),
+                        fontWeight: FontWeight.bold),
                   ),
                   Text(
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu",
                     style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.normal,
+                      color: Colors.white,
+                      fontSize: 14.0,
+                      fontWeight: FontWeight.normal,
                     ),
                   ),
                 ],
               ),
             ),
           ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 14),
+              decoration: BoxDecoration(
 
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black,
+                    blurRadius: 100,
+                    offset: const Offset(0, -58),
+                  ),
+                ],
+              ),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  backgroundColor: const Color(0xff00fa9a),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
+                  child: Text(
+                    "Buy \$200",
+                    style: TextStyle(
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );

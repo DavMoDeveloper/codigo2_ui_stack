@@ -63,46 +63,93 @@ class Login2Page extends StatelessWidget {
             ],
           ),
           //Formulario
-          SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(28.0),
-              child: Column(
-                children: [
-                  Text("Create your Account!"),
-                  TextField(),
-                  TextField(),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(40.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: const Color(0xffD94E8E).withOpacity(0.65),
-                            offset: const Offset(0, 4),
-                            blurRadius: 12.0,
-                          ),
-                        ],
-                        gradient: LinearGradient(
-                          colors: [
-                            Color(0xffE98DB7),
-                            Color(0xffD94E8E),
-                          ],
-                        )),
-                    child: MaterialButton(
-                      child: Text("Create Account"),
-                      textColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40.0),
+          SingleChildScrollView(
+            child: Container(
+              margin: EdgeInsets.symmetric(vertical: height * 0.2),
+              child: SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.all(28.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Create your Account!",
+                        maxLines: 2,
+                        style: TextStyle(
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xff564293),
+                        ),
                       ),
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> InitPage()));
-                      },
-                    ),
+                      SizedBox(
+                        height: height * 0.1,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                          contentPadding: const EdgeInsets.symmetric(
+                              horizontal: 18.0, vertical: 16.0),
+                          prefixIcon: Icon(
+                            Icons.mail,
+                            color: Color(0xff564293),
+                          ),
+                          hintText: "Email addresss",
+                          hintStyle: const TextStyle(fontSize: 14.0),
+                        ),
+                      ),
+                      TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          contentPadding: const EdgeInsets.symmetric(
+                              horizontal: 18.0, vertical: 16.0),
+                          prefixIcon: Icon(
+                            Icons.lock_sharp,
+                            color: Color(0xff564293),
+                          ),
+                          hintText: "Password",
+                          hintStyle: const TextStyle(fontSize: 14.0),
+                          suffixIcon: Icon(
+                            Icons.remove_red_eye_sharp,
+                            color: Color(0xff564293),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: height * 0.1,
+                      ),
+                      Container(
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(40.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: const Color(0xffD94E8E).withOpacity(0.65),
+                                offset: const Offset(0, 4),
+                                blurRadius: 12.0,
+                              ),
+                            ],
+                            gradient: LinearGradient(
+                              colors: [
+                                Color(0xffE98DB7),
+                                Color(0xffD94E8E),
+                              ],
+                            )),
+                        child: MaterialButton(
+                          child: Text("Create Account"),
+                          textColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(40.0),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => InitPage()));
+                          },
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
             ),
           )
