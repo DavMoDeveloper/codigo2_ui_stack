@@ -34,7 +34,48 @@ class Init2Page extends StatelessWidget {
         backgroundColor: Colors.transparent,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(
+                Icons.chevron_left,
+                color: Colors.white,
+                size: 40,
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Sign In",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 50.0,
+                  ),
+                  Text(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 100,
+            ),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 36.0),
               width: double.infinity,
@@ -158,7 +199,8 @@ class Init2Page extends StatelessWidget {
                                     color: Colors.transparent,
                                     borderRadius: BorderRadius.circular(50.0),
                                     image: DecorationImage(
-                                        image: NetworkImage("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Kg2FF2wpIK_HLyo8Q56ycAHaFj%26pid%3DApi&f=1&ipt=28326c5e92ea0dfe075dfdc364b29109e6e2cd9d096caf80908b04dac7cab3dd&ipo=images")),
+                                        image: NetworkImage(
+                                            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Kg2FF2wpIK_HLyo8Q56ycAHaFj%26pid%3DApi&f=1&ipt=28326c5e92ea0dfe075dfdc364b29109e6e2cd9d096caf80908b04dac7cab3dd&ipo=images")),
                                   ),
                                 ),
                                 SizedBox(
@@ -202,7 +244,7 @@ class Init2Page extends StatelessWidget {
                           Expanded(
                             child: Row(
                               children: [
-                                 SizedBox(
+                                SizedBox(
                                   width: 10.0,
                                 ),
                                 Container(
@@ -212,7 +254,8 @@ class Init2Page extends StatelessWidget {
                                     color: Colors.transparent,
                                     borderRadius: BorderRadius.circular(50.0),
                                     image: DecorationImage(
-                                        image: NetworkImage("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Ffacebook-icons%2Ffacebook-first-employee-2.png&f=1&nofb=1&ipt=4b683c4af720b6f532311005a40ff9e7b652492d7c7895ddca5910d1abb40944&ipo=images")),
+                                        image: NetworkImage(
+                                            "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Ffacebook-icons%2Ffacebook-first-employee-2.png&f=1&nofb=1&ipt=4b683c4af720b6f532311005a40ff9e7b652492d7c7895ddca5910d1abb40944&ipo=images")),
                                   ),
                                 ),
                                 SizedBox(
